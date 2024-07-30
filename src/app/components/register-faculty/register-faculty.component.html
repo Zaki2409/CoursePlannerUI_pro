@@ -1,0 +1,73 @@
+<div class="login-page">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title text-center">Register Faculty</h2>
+              <form (ngSubmit)="registerFaculty()">
+                <div class="cls-in">
+                  <label for="facultyCode">Faculty Code:</label>
+                  <input type="text" id="facultyCode" name="facultyCode" [(ngModel)]="facultyReq.facultyCode" placeholder="Faculty Code" required>
+                </div>
+              
+                <div class="cls-in">
+                  <label for="facultyName">Faculty Name:</label>
+                  <input type="text" id="facultyName" name="facultyName" [(ngModel)]="facultyReq.facultyName" placeholder="Faculty Name" required>
+                </div>
+              
+                <div class="cls-in">
+                  <label for="facultyDob">Date of Birth:</label>
+                  <input type="date" id="facultyDob" name="facultyDob" [(ngModel)]="facultyReq.facultyDob" required>
+                </div>
+              
+                <div class="cls-in">
+                  <label for="facultyGender">Gender:</label>
+                  <select id="facultyGender" name="facultyGender" [(ngModel)]="facultyReq.facultyGender" required>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    
+                  </select>
+                </div>
+              
+                <div class="cls-in"> 
+                  <label for="facultyEmail">Email:</label>
+                  <input type="email" id="facultyEmail" name="facultyEmail" [(ngModel)]="facultyReq.facultyEmail" placeholder="Email" required>
+                </div>
+              
+                <div class="cls-in">
+                  <label for="facultyPhone">Phone:</label>
+                  <input type="tel" id="facultyPhone" name="facultyPhone" [(ngModel)]="facultyReq.facultyPhone" placeholder="Phone" required>
+                </div>
+              
+                <div class="cls-in">
+                  <label for="loginName">Login Name:</label>
+                  <input type="text" id="loginName" name="loginName" [(ngModel)]="facultyReq.loginName" placeholder="Login Name">
+                </div>
+              
+                <div class="cls-in">
+                  <label for="loginPassword">Login Password:</label>
+                  <input type="password" id="loginPassword" name="loginPassword" [(ngModel)]="facultyReq.loginPassword" placeholder="Login Password">
+                </div>
+              
+                <!-- Additional fields -->
+                <div class="cls-in">
+                  <label for="fkCollegeUid">College UID:</label>
+                  <input type="text" id="fkCollegeUid" name="fkCollegeUid" [(ngModel)]="facultyReq.fkCollegeUid" placeholder="College UID" required>
+                </div>
+              
+                <div class="cls-in">
+                  <label for="createdBy">Created By:</label>
+                  <input type="text" id="createdBy" name="createdBy" [(ngModel)]="facultyReq.createdBy" placeholder="Created By" required>
+                </div>
+              
+                <button type="submit">Register Faculty</button>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
