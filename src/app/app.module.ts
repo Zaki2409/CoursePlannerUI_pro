@@ -31,6 +31,13 @@ import { CompleteProfileComponent } from './components/complete-profile/complete
 import { FacultydashbaordComponent } from './components/facultydashbaord/facultydashbaord.component';
 import { FSidebarComponent } from './components/f-sidebar/f-sidebar.component';
 import { CreatecourseComponent } from './components/createcourse/createcourse.component';
+import { DepartmentComponent } from './components/department/department.component';
+import { CreatedepartmentComponent } from './components/createdepartment/createdepartment.component';
+import { CreatelessonComponent } from './components/createlesson/createlesson.component';
+
+import { CreateAcademicCalenderComponent } from './components/create-academic-calender/create-academic-calender.component';
+import { HolidayListComponent } from './components/holiday-list/holiday-list.component';
+import { CreateHolidayListComponent } from './components/create-holiday-list/create-holiday-list.component';
 
 
 
@@ -57,6 +64,14 @@ registerLocaleData(en);
                               FacultydashbaordComponent,
                               FSidebarComponent,
                               CreatecourseComponent,
+                              DepartmentComponent,
+                              CreatedepartmentComponent,
+                              CreatelessonComponent,
+                             
+                              CreateAcademicCalenderComponent,
+                                                            HolidayListComponent,
+                                                            CreateHolidayListComponent,
+                           
                              
                           
                             

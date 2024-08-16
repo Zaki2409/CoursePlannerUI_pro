@@ -1,0 +1,59 @@
+<!-- your-component.component.html -->
+<div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
+    <!-- Navbar -->
+    <nav  class="navbar navbar-expand-lg  navbar-dark bg-dark" >
+      <a class="navbar-brand" routerLink="/course"  style="padding-left: 1%;">Course Management</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/createcourse">Create Course</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  
+      <!-- Create Course Form -->
+  <div id="createCourse">
+    <h2>Create New Course</h2>
+    <form  (ngSubmit)="createDepartment()">
+      <div class="form-group">
+        <label for="courseCode">Department Code</label>
+        <input type="text" id="courseCode"  class="form-control"  [(ngModel)]="deptReq.deptCode" name="courseCode" />
+       
+      </div>
+      <div class="form-group">
+        <label for="courseName">Department Name</label>
+        <input type="text" id="courseName"  class="form-control"  [(ngModel)]="deptReq.deptName" name="courseName" />
+        
+      </div>
+      <!-- <div class="form-group">
+        <label for="weeklyLectures">Weekly Lectures</label>
+        <input type="number" id="weeklyLectures"  class="form-control"  [(ngModel)]="deptReq.weeklyLectures" name="weeklyLectures" />
+       
+      </div>
+      <div class="form-group">
+        <label for="weeklyTheory">Weekly Theory</label>
+        <input type="number" id="weeklyTheory" class="form-control"  [(ngModel)]="deptReq.weeklyTheory" name="weeklyTheory"/>
+        
+      </div>
+      <div class="form-group">
+        <label for="weeklyPracticals">Weekly Practicals</label>
+        <input type="number" id="weeklyPracticals"  class="form-control" [(ngModel)]="deptReq.weeklyPracticals" name="weeklyPracticals" />
+        
+      </div> -->
+      <div class="form-group">
+        <label for="createdBy">Created By</label>
+        <input type="text" id="createdBy" class="form-control" [(ngModel)]="deptReq.createdBy" name="createdBy" />
+        
+      </div>
+      <div class="form-group">
+        <label for="isActive">Is Active</label>
+        <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="deptReq.isActive" name="isActive" />
+      </div>
+      <button type="submit" class="btn btn-primary">Create Department</button>
+    </form>
+  </div>
+  </div>
+  

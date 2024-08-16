@@ -1,0 +1,54 @@
+<!-- your-component.component.html -->
+<div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
+    <!-- Navbar -->
+    <nav  class="navbar navbar-expand-lg  navbar-dark bg-dark" >
+      <a class="navbar-brand" routerLink="/course"  style="padding-left: 1%;">Course Management</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/createcourse">Create Course</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  
+      <!-- Create Course Form -->
+  <div id="createCourse">
+    <h2>Create New Course</h2>
+    <form  (ngSubmit)="createLesson()">
+      <div class="form-group">
+        <label for="courseCode">lesson Name</label>
+        <input type="text" id="lessonName"  class="form-control"  [(ngModel)]="lessonReq.lessonName" name="lessonName" />
+       
+      </div>
+      <div class="form-group">
+        <label for="courseName">lesson Topic</label>
+        <input type="text" id="lessonTopic"  class="form-control"  [(ngModel)]="lessonReq.lessonTopic" name="lessonTopic" />
+        
+      </div>
+      <div class="form-group">
+        <label for="fkCourseUid">Course UID</label>
+        <select id="fkCourseUid" class="form-control" [(ngModel)]="lessonReq.fkCourseUid" name="fkCourseUid">
+          <option *ngFor="let course of courses" [value]="course.uid">
+            {{ course.uid }}
+          </option>
+        </select>
+      </div>
+      
+     
+      <div class="form-group">
+        <label for="createdBy">Created By</label>
+        <input type="text" id="createdBy" class="form-control" [(ngModel)]="lessonReq.createdBy" name="createdBy" />
+        
+      </div>
+      <div class="form-group">
+        <label for="isActive">Is Active</label>
+        <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="lessonReq.isActive" name="isActive" />
+      </div>
+      <button type="submit" class="btn btn-primary">Create Course</button>
+    </form>
+  </div>
+  </div>
+  

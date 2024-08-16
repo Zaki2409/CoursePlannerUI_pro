@@ -12,6 +12,12 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CompleteProfileComponent } from './components/complete-profile/complete-profile.component';
 import { FacultydashbaordComponent } from './components/facultydashbaord/facultydashbaord.component';
 import { CreatecourseComponent } from './components/createcourse/createcourse.component';
+import { DepartmentComponent } from './components/department/department.component';
+import { CreatedepartmentComponent } from './components/createdepartment/createdepartment.component';
+import { CreatelessonComponent } from './components/createlesson/createlesson.component';
+import { CreateAcademicCalenderComponent } from './components/create-academic-calender/create-academic-calender.component';
+import { HolidayListComponent } from './components/holiday-list/holiday-list.component';
+import { CreateHolidayListComponent } from './components/create-holiday-list/create-holiday-list.component';
 
 
 
@@ -31,6 +37,18 @@ const routes: Routes = [
   { path: 'facultyprofile', component: ProfileComponent },
   { path: 'Complete-faculty', component: CompleteProfileComponent },
   { path: 'createcourse', component: CreatecourseComponent },
+  { path: 'Department', component: DepartmentComponent },
+  { path: 'createdepartment', component: CreatedepartmentComponent },
+  { path: 'createdepartment', component: CreatedepartmentComponent },
+  { path: 'lesson', component: LessonComponent },
+  { path: 'createlesson', component: CreatelessonComponent },
+  { path: 'academic', component: AcademicCalendarComponent },
+  { path: 'createacademic', component: CreateAcademicCalenderComponent },
+  { path: 'Holiday', component: HolidayListComponent },
+  { path: 'createHoliday', component: CreateHolidayListComponent },
+  
+  
+
 
   // { path: '', redirectTo: '/admin-dashboard', pathMatch: 'full' }, // Default route
   { path: '**', redirectTo: '/admin-dashboard' }, // Redirect any other route to def // cahnge to dahsbaod
