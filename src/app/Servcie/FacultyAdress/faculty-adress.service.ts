@@ -28,6 +28,7 @@ export class FacultyAdressService {
     return this.http.post<Address>(this.baseApiUrl +'api/FacultyAddress', address);
   }
 
+  
   updateAddress(uid: string, address: Address): Observable<Address> {
     return this.http.put<Address>(this.baseApiUrl + 'api/FacultyAddress/${uid}', address);
   }

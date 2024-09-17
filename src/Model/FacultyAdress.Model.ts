@@ -1,4 +1,5 @@
 export interface Address {
+    facultyUid: string | null;
     id: number;
     uid: string;  // Guid in C# is string in TypeScript
     line1: string;
@@ -12,5 +13,6 @@ export interface Address {
     createdAt: Date;
     updatedBy?: string;  // Optional field
     updatedAt?: Date;  // Optional field
+    addressType: string;
   }
   

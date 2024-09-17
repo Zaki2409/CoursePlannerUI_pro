@@ -9,7 +9,7 @@
             <li class="nav-item"> <a class="nav-link active" aria-current="page" routerLink="/Complete-faculty" >Complete Profile</a></li>
           <li class="nav-item">
            
-            <a class="nav-link active" aria-current="page"  routerLink="/udpate-faculty" >Update Profile</a>
+           <a class="nav-link active" aria-current="page"   routerLink="/basic-admin-dashboard" >Dash board</a>
          
           
           </li>
@@ -32,6 +32,10 @@
             <div class="form-group">
               <label for="line1">Line 1</label>
               <input id="line1" [(ngModel)]="createTEMPadressfaculty.line1" name="line1" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="line2">Line 2</label>
+              <input id="line2" [(ngModel)]="createTEMPadressfaculty.line2" name="line2" type="text" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="city">City</label>
@@ -63,6 +67,10 @@
               <label for="createdAt">Created At</label>
               <input id="createdAt" [(ngModel)]="createTEMPadressfaculty.createdAt" name="createdAt" type="datetime-local" class="form-control" required>
             </div> -->
+            <div class="form-group">
+              <label for="isActive">Is Active</label>
+              <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="createTEMPadressfaculty.isActive" name="isActive" />
+            </div>
             <br>
             <button type="submit" class="btn btn-primary">Submit Temprary Adress</button>
           </form>
@@ -81,6 +89,10 @@
                <label for="line1">Line 1</label>
                <input id="line1" [(ngModel)]="createPermanentadressfaculty.line1" name="line1" type="text" class="form-control" required>
              </div>
+             <div class="form-group">
+              <label for="line2">Line 2</label>
+              <input id="line2" [(ngModel)]="createPermanentadressfaculty.line2" name="line2" type="text" class="form-control" required>
+            </div>
              <div class="form-group">
                <label for="city">City</label>
                <input id="city" [(ngModel)]="createPermanentadressfaculty.city" name="city" type="text" class="form-control" required>
@@ -111,6 +123,10 @@
                <label for="createdAt">Created At</label>
                <input id="createdAt" [(ngModel)]="createTEMPadressfaculty.createdAt" name="createdAt" type="datetime-local" class="form-control" required>
              </div> -->
+             <div class="form-group">
+              <label for="isActive">Is Active</label>
+              <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="createPermanentadressfaculty.isActive" name="isActive" />
+            </div>
              <br>
              <button type="submit" class="btn btn-primary">Submit Temprary Adress</button>
            </form>

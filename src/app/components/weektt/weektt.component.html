@@ -1,0 +1,93 @@
+<div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" routerLink="/lesson" style="padding-left: 40%;">Create WEEK TIME TABLE</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <!-- Optional items can be added here -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- Create Week Time Table Form -->
+  <div id="createWeekTT">
+    <h2>Create New Week Time Table</h2>
+    <form (ngSubmit)="createWeekTT()">
+      <div class="form-group">
+        <label for="fkAcademicYearUid">Academic Year UID</label>
+        <select id="fkAcademicYearUid" class="form-control" [(ngModel)]="weekReq.fkAcademicYearUid" name="fkAcademicYearUid" required>
+          <option *ngFor="let year of acadmicyear" [value]="year.uid">
+            {{ year.academicYear1 }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fkSemesterUid">Semester UID</label>
+        <select id="fkSemesterUid" class="form-control" [(ngModel)]="weekReq.fkSemesterUid" name="fkSemesterUid" required>
+          <option *ngFor="let semester of semeste" [value]="semester.uid">
+            {{ semester.semesterCode }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fkFacultyUid">Faculty UID</label>
+        <select id="fkFacultyUid" class="form-control" [(ngModel)]="weekReq.fkFacultyUid" name="fkFacultyUid" required>
+          <option *ngFor="let faculty of facult" [value]="faculty.uid">
+            {{ faculty.facultyName }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fkWeekDayUid">Week Day UID</label>
+        <select id="fkWeekDayUid" class="form-control" [(ngModel)]="weekReq.fkWeekDayUid" name="fkWeekDayUid" required>
+          <option *ngFor="let weekday of weeekday" [value]="weekday.uid">
+            {{ weekday.dayName }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fkTimeslotUid">Timeslot UID</label>
+        <select id="fkTimeslotUid" class="form-control" [(ngModel)]="weekReq.fkTimeslotUid" name="fkTimeslotUid" required>
+          <option *ngFor="let timeslot of Timeslot" [value]="timeslot.uid">
+            {{ timeslot.timeSlotCode }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fkAccademicClassUid">Academic Class UID</label>
+        <select id="fkAccademicClassUid" class="form-control" [(ngModel)]="weekReq.fkAccademicClassUid" name="fkAccademicClassUid" required>
+          <option *ngFor="let academicClass of academicclass" [value]="academicClass.uid">
+            {{ academicClass.classCode }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fkCourseUid">Course UID</label>
+        <select id="fkCourseUid" class="form-control" [(ngModel)]="weekReq.fkCourseUid" name="fkCourseUid" required>
+          <option *ngFor="let course of courses" [value]="course.uid">
+            {{ course.courseName }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="isActive">Is Active</label>
+        <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="weekReq.isActive" name="isActive" />
+        <!-- <select id="isActive" class="form-control" [(ngModel)]="weekReq.isActive" name="isActive" required>
+          <option [value]="true">True</option>
+          <option [value]="false">False</option>
+        </select> -->
+      </div>
+      <div class="form-group">
+        <label for="createdBy">Created By</label>
+        <input type="text" id="createdBy" class="form-control" [(ngModel)]="weekReq.createdBy" name="createdBy" />
+        <!-- <select id="createdBy" class="form-control" [(ngModel)]="weekReq.createdBy" name="createdBy" required>
+          <option *ngFor="let faculty of facult" [value]="faculty.uid">
+            {{ faculty.uid }}
+          </option>
+        </select> -->
+      </div>
+      <button type="submit" class="btn btn-primary">Create Week Time Table</button>
+    </form>
+  </div>
+  

@@ -18,6 +18,7 @@ import { CreatelessonComponent } from './components/createlesson/createlesson.co
 import { CreateAcademicCalenderComponent } from './components/create-academic-calender/create-academic-calender.component';
 import { HolidayListComponent } from './components/holiday-list/holiday-list.component';
 import { CreateHolidayListComponent } from './components/create-holiday-list/create-holiday-list.component';
+import { WeekttComponent } from './components/weektt/weektt.component';
 
 
 
@@ -46,6 +47,8 @@ const routes: Routes = [
   { path: 'createacademic', component: CreateAcademicCalenderComponent },
   { path: 'Holiday', component: HolidayListComponent },
   { path: 'createHoliday', component: CreateHolidayListComponent },
+  { path: 'weekday', component: WeekttComponent },
+  
   
   
 

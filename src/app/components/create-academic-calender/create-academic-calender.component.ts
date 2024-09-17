@@ -115,7 +115,7 @@ export class CreateAcademicCalenderComponent implements OnInit {
           
         },
         error: (response) => {
-          console.log('Error creating course:', response);
+          console.log('Error creating course:', response); 
         }
       });
   }
