@@ -2,12 +2,15 @@
 <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
     <!-- Navbar -->
     <nav  class="navbar navbar-expand-lg  navbar-dark bg-dark" >
-      <a class="navbar-brand" routerLink="/course"  style="padding-left: 1%;">Course Management</a>
+      <a class="navbar-brand" routerLink="/lesson"  style="padding-left: 1%;">Lesson Management</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           
           <li class="nav-item">
-            <a class="nav-link" routerLink="/createcourse">Create Course</a>
+            <a class="nav-link" routerLink="/createlesson">Create Lesson</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin-dashboard">Dash-Board</a>
           </li>
         </ul>
       </div>
@@ -16,7 +19,7 @@
   
       <!-- Create Course Form -->
   <div id="createCourse">
-    <h2>Create New Course</h2>
+    <h2>Create New Lesson</h2>
     <form  (ngSubmit)="createLesson()">
       <div class="form-group">
         <label for="courseCode">lesson Name</label>
@@ -47,7 +50,7 @@
         <label for="isActive">Is Active</label>
         <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="lessonReq.isActive" name="isActive" />
       </div>
-      <button type="submit" class="btn btn-primary">Create Course</button>
+      <button type="submit" class="btn btn-primary">Create Lesson</button>
     </form>
   </div>
   </div>

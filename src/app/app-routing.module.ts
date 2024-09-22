@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: 'Department', component: DepartmentComponent },
   { path: 'createdepartment', component: CreatedepartmentComponent },
   { path: 'createdepartment', component: CreatedepartmentComponent },
-  { path: 'lesson', component: LessonComponent },
+  //{ path: 'lesson', component: LessonComponent },
   { path: 'createlesson', component: CreatelessonComponent },
   { path: 'academic', component: AcademicCalendarComponent },
   { path: 'createacademic', component: CreateAcademicCalenderComponent },

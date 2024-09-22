@@ -1,10 +1,12 @@
 <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%;">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" routerLink="/lesson" style="padding-left: 40%;">Create WEEK TIME TABLE</a>
+      <a class="navbar-brand" routerLink="/lesson"style="padding-left: 1%;">Week Time Table</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-          <!-- Optional items can be added here -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin-dashboard">Dash-Board</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -12,7 +14,7 @@
   
   <!-- Create Week Time Table Form -->
   <div id="createWeekTT">
-    <h2>Create New Week Time Table</h2>
+    <h2>Create Week Time Table</h2>
     <form (ngSubmit)="createWeekTT()">
       <div class="form-group">
         <label for="fkAcademicYearUid">Academic Year UID</label>

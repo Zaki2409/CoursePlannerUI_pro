@@ -2,20 +2,23 @@
 <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" routerLink="/academic-calendar" style="padding-left: 1%;">Academic Calendar Management</a>
+      <a class="navbar-brand" routerLink="/Holiday" style="padding-left: 1%;">Holiday List Management</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/create-academic-calendar">Create Academic Calendar</a>
+            <a class="nav-link" routerLink="/createHoliday">Create Holiday</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin-dashboard">Dash-Board</a>
           </li>
         </ul>
       </div>
     </nav>
   
-
+<br>
     <!-- Create My Model Form -->
     <div id="createMyModel">
-      <h2>Create New My Model</h2>
+      <h2>Create Holiday</h2>
       <form (ngSubmit)="createHL()">
         <div class="form-group">
           <label for="occassion">Occassion</label>
@@ -45,7 +48,7 @@
           <label for="isActive">Is Active</label>
           <input type="checkbox" id="isActive" class="form-check-input" [(ngModel)]="courseReq.isActive" name="isActive" />
         </div>
-        <button type="submit" class="btn btn-primary">Create My Model</button>
+        <button type="submit" class="btn btn-primary">Create Holiday</button>
       </form>
     </div>
   </div>
