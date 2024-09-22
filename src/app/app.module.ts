@@ -39,6 +39,13 @@ import { CreateAcademicCalenderComponent } from './components/create-academic-ca
 import { HolidayListComponent } from './components/holiday-list/holiday-list.component';
 import { CreateHolidayListComponent } from './components/create-holiday-list/create-holiday-list.component';
 import { WeekttComponent } from './components/weektt/weektt.component';
+import { FaclessonComponent } from './components/faclesson/faclesson.component';
+import { FaccourseComponent } from './components/faccourse/faccourse.component';
+import { FacacademicalenderComponent } from './components/facacademicalender/facacademicalender.component';
+import { FacholidaylistComponent } from './components/facholidaylist/facholidaylist.component';
+import { FacdepartmentComponent } from './components/facdepartment/facdepartment.component';
+import { FacprofileComponent } from './components/facprofile/facprofile.component';
+import { FaccompleteprofileComponent } from './components/faccompleteprofile/faccompleteprofile.component';
 
 
 
@@ -73,6 +80,13 @@ registerLocaleData(en);
                                                             HolidayListComponent,
                                                             CreateHolidayListComponent,
                                                             WeekttComponent,
+                                                            FaclessonComponent,
+                                                            FaccourseComponent,
+                                                            FacacademicalenderComponent,
+                                                            FacholidaylistComponent,
+                                                            FacdepartmentComponent,
+                                                            FacprofileComponent,
+                                                            FaccompleteprofileComponent,
                            
                              
                           
