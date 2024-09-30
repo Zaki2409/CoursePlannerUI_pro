@@ -26,7 +26,7 @@ import { WeekTT } from 'src/Model/WeekTt.Model';
 export class FacultydashbaordComponent implements OnInit{
   userUid: string | null = '';
   weektt :WeekTT[] = [];
-  Weektt1 :WeekTTable [ ] = [];
+  Weektt1: (WeekTTable | null)[] = [];
   academiclass : LINQacademicclass [] = [];
 
   weekReq: WeekTT = {
