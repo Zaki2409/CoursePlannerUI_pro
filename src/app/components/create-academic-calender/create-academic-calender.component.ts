@@ -110,7 +110,7 @@ export class CreateAcademicCalenderComponent implements OnInit {
       .subscribe({
         next: (response) => {
           console.log(response);
-          console.log('Course created successfully:', response);
+          console.log('academic calender created successfully:', response);
           
           
         },

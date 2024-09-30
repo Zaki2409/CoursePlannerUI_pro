@@ -21,13 +21,14 @@ export class AcademicCalendarComponent implements OnInit{
   
       this.academiccalenderService.getAllacademiccalender()
       .subscribe({
-        next: (academic) => {
-           console.log(academic);
+        next: (academica) => {
+           console.log(academica);
             //to print the data from array in inspection tab 
-            this.academic = academic;
+            this.academic = academica;
             
         },
         error: (response) => {
+          console.log("cech");
             console.log(response);
            
         }
@@ -38,8 +39,4 @@ export class AcademicCalendarComponent implements OnInit{
   
       })
     }
-  
-  }
-   {
-
 }

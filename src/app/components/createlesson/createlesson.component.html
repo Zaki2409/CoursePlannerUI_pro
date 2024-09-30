@@ -32,10 +32,10 @@
         
       </div>
       <div class="form-group">
-        <label for="fkCourseUid">Course UID</label>
+        <label for="fkCourseUid">Course Name</label>
         <select id="fkCourseUid" class="form-control" [(ngModel)]="lessonReq.fkCourseUid" name="fkCourseUid">
           <option *ngFor="let course of courses" [value]="course.uid">
-            {{ course.uid }}
+            {{ course.courseName }}
           </option>
         </select>
       </div>
@@ -43,8 +43,10 @@
      
       <div class="form-group">
         <label for="createdBy">Created By</label>
-        <input type="text" id="createdBy" class="form-control" [(ngModel)]="lessonReq.createdBy" name="createdBy" />
-        
+        <select type="text" id="createdBy" class="form-control" [(ngModel)]="lessonReq.createdBy" name="createdBy">
+        <option value="11E674F1-E66D-4564-BF68-E30B27614946" >Admin</option>
+      </select>
+    
       </div>
       <div class="form-group">
         <label for="isActive">Is Active</label>

@@ -1,0 +1,13 @@
+// insteead of hard code ...we can use this to get values in selction . // for mutliple options  
+  </div>
+      <div class="form-group">
+        <label for="fkCourseUid">Course Name</label>
+        <select id="fkCourseUid" class="form-control" [(ngModel)]="lessonReq.fkCourseUid" name="fkCourseUid">
+          <option *ngFor="let course of courses" [value]="course.uid">
+            {{ course.courseName }}
+          </option>
+        </select>
+      </div>
+      
+
+      

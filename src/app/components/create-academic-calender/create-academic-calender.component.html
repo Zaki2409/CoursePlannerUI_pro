@@ -36,7 +36,7 @@
         <label for="fkAcademicYearUid">Academic Year UID</label>
         <select id="fkAcademicYearUid" class="form-control" [(ngModel)]="academicReq.fkAcademicYearUid" name="fkAcademicYearUid">
           <option *ngFor="let year of academicYears" [value]="year.uid">
-            {{ year.uid }}
+            {{ year.academicYear1 }}
           </option>
         </select>
       </div>
@@ -44,7 +44,7 @@
         <label for="fkSemesterUid">Semester UID</label>
         <select id="fkSemesterUid" class="form-control" [(ngModel)]="academicReq.fkSemesterUid" name="fkSemesterUid">
           <option *ngFor="let semester of semesters" [value]="semester.uid">
-            {{ semester.uid }}
+            {{ semester.semesterCode }}
           </option>
         </select>
       </div>
@@ -52,14 +52,15 @@
         <label for="fkClassUid">Class UID</label>
         <select id="fkClassUid" class="form-control" [(ngModel)]="academicReq.fkClassUid" name="fkClassUid">
           <option *ngFor="let cls of classes" [value]="cls.uid">
-            {{ cls.uid }}
+            {{ cls.classYear }}
           </option>
         </select>
       </div>
         <div class="form-group">
           <label for="createdBy">Created By</label>
-          <input type="text" id="createdBy" class="form-control" [(ngModel)]="academicReq.createdBy" name="createdBy" />
-        </div>
+          <select type="text" id="createdBy" class="form-control" [(ngModel)]="academicReq.createdBy" name="createdBy">
+            <option value="11E674F1-E66D-4564-BF68-E30B27614946" >Admin</option>
+          </select>        </div>
         <div class="form-group">
           <label for="isActive">Is Active</label>
           <input type="checkbox" id="isActive" class="form-check-input" [(ngModel)]="academicReq.isActive" name="isActive" />

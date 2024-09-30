@@ -53,12 +53,16 @@
                 <!-- Additional fields -->
                 <div class="cls-in">
                   <label for="fkCollegeUid">College UID:</label>
-                  <input type="text" id="fkCollegeUid" name="fkCollegeUid" [(ngModel)]="facultyReq.fkCollegeUid" placeholder="College UID" required>
+                  <select type="text" id="fkCollegeUid" name="fkCollegeUid" [(ngModel)]="facultyReq.fkCollegeUid" placeholder="College UID" required>
+                  <option value="9EA2B2A2-FAF9-45AA-9DA1-FD778F4ACAC4">Sohoorthy Engineering College</option>
+                  </select>  
                 </div>
               
                 <div class="cls-in">
                   <label for="createdBy">Created By:</label>
-                  <input type="text" id="createdBy" name="createdBy" [(ngModel)]="facultyReq.createdBy" placeholder="Created By" required>
+                  <select type="text" id="createdBy" class="form-control" [(ngModel)]="facultyReq.createdBy" name="createdBy">
+                    <option value="11E674F1-E66D-4564-BF68-E30B27614946">Admin</option>
+                  </select>
                 </div>
               
                 <button type="submit">Register Faculty</button>
