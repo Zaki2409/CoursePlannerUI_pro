@@ -2,7 +2,8 @@
   <app-f-sidebar></app-f-sidebar>
   <div class="content">
     <!-- Content of Basic Dashboard -->
-    <h1>Welcome to Faculty Dashboard</h1>
+    <h1>Welcome {{ Weektt1[0]?.facultyName }} to the Faculty Dashboard</h1>
+
 
     <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%;">
       <!-- Navbar -->
@@ -41,13 +42,13 @@
         </thead>
         <tbody>
           <tr *ngFor="let weekttt of Weektt1">
-            <td>{{ weekttt.timeSlotCode }}</td>
-            <td>{{ weekttt.dayName }}</td>
-            <td>{{ weekttt.facultyName }}</td>
-            <td>{{ weekttt.academicYear }}</td>
-            <td>{{ weekttt.semesterCode }}</td>
-            <td>{{ weekttt.semesterCode }}</td>
-            <td>{{ weekttt.courseName }}</td>
+            <td>{{ weekttt?.timeSlotCode }}</td>
+            <td>{{ weekttt?.dayName }}</td>
+            <td>{{ weekttt?.facultyName }}</td>
+            <td>{{ weekttt?.academicYear }}</td>
+            <td>{{ weekttt?.semesterCode }}</td>
+            <td>{{ weekttt?.semesterCode }}</td>
+            <td>{{ weekttt?.courseName }}</td>
             <!-- <td>{{ weekttt.createdBy }}</td>
             <td>{{ weekttt.createdAt | date: 'short' }}</td>
             <td>{{ weekttt.updatedBy }}</td>
@@ -58,7 +59,7 @@
       </table>
       
       <!-- Message for No Data -->
-      <p *ngIf="!weektt || weektt.length === 0">No Week Time Table Details Were Found</p>
+      <p *ngIf="!weektt || weektt.length === 0"> Week Time Table Has Not Been Created By Admin</p>
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
 <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
     <!-- Navbar -->
     <nav  class="navbar navbar-expand-lg  navbar-dark bg-dark" >
-      <a class="navbar-brand" routerLink="/course"  style="padding-left: 1%;">Department Management</a>
+      <a class="navbar-brand" routerLink="/Department"  style="padding-left: 1%;">Department Management</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           
@@ -48,8 +48,9 @@
       </div> -->
       <div class="form-group">
         <label for="createdBy">Created By</label>
-        <input type="text" id="createdBy" class="form-control" [(ngModel)]="deptReq.createdBy" name="createdBy" />
-        
+        <select type="text" id="createdBy" class="form-control" [(ngModel)]="deptReq.createdBy" name="createdBy">
+          <option value="11E674F1-E66D-4564-BF68-E30B27614946" >Admin</option>
+        </select>        
       </div>
       <div class="form-group">
         <label for="isActive">Is Active</label>

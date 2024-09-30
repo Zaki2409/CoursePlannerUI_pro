@@ -9,5 +9,7 @@
         </select>
       </div>
       
-
-      
+// har code for admin
+    <select type="text" id="createdBy" class="form-control" [(ngModel)]="lessonReq.createdBy" name="createdBy">
+        <option value="11E674F1-E66D-4564-BF68-E30B27614946" >Admin</option>
+      </select>

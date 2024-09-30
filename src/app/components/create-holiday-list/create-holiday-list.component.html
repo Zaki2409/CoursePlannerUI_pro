@@ -38,8 +38,10 @@
         </div>
         <div class="form-group">
           <label for="createdBy">Created By</label>
-          <input type="text" id="createdBy" class="form-control" [(ngModel)]="courseReq.createdBy" name="createdBy" />
-        </div>
+          <select type="text" id="createdBy" class="form-control" [(ngModel)]="courseReq.createdBy" name="createdBy">
+            <option value="11E674F1-E66D-4564-BF68-E30B27614946" >Admin</option>
+          </select>
+                </div>
         <div class="form-group">
           <label for="day">Day</label>
           <input type="text" id="day" class="form-control" [(ngModel)]="courseReq.day" name="day" />
