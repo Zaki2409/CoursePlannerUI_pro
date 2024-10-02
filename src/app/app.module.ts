@@ -44,8 +44,9 @@ import { FaccourseComponent } from './components/faccourse/faccourse.component';
 import { FacacademicalenderComponent } from './components/facacademicalender/facacademicalender.component';
 import { FacholidaylistComponent } from './components/facholidaylist/facholidaylist.component';
 import { FacdepartmentComponent } from './components/facdepartment/facdepartment.component';
-import { FacprofileComponent } from './components/facprofile/facprofile.component';
+
 import { FaccompleteprofileComponent } from './components/faccompleteprofile/faccompleteprofile.component';
+import { FacprofileComponent } from './components/facprofile/facprofile.component';
 
 
 
@@ -85,15 +86,10 @@ registerLocaleData(en);
                                                             FacacademicalenderComponent,
                                                             FacholidaylistComponent,
                                                             FacdepartmentComponent,
-                                                            FacprofileComponent,
+                                                         
                                                             FaccompleteprofileComponent,
-                           
-                             
-                          
-                            
-                            
-           
-    
+                                                                                                                      FacprofileComponent,
+                         
   ],
   imports: [
     BrowserModule,

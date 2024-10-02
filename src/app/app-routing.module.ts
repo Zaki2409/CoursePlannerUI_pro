@@ -25,6 +25,8 @@ import { FaccourseComponent } from './components/faccourse/faccourse.component';
 import { FacdepartmentComponent } from './components/facdepartment/facdepartment.component';
 import { FacholidaylistComponent } from './components/facholidaylist/facholidaylist.component';
 import { FaclessonComponent } from './components/faclesson/faclesson.component';
+import { FacprofileComponent } from './components/facprofile/facprofile.component';
+
 
 
 
@@ -59,12 +61,14 @@ const routes: Routes = [
   { path: 'faclesson', component: FaclessonComponent },
   { path: 'facacademic-calendar', component: FacacademicalenderComponent },
   { path: 'faccourse', component: FaccourseComponent },
-  { path: 'facprofile', component: FaccompleteprofileComponent },
+  { path: 'facprofile', component: FacprofileComponent },
   { path: 'faccourse', component: FaccourseComponent },
   { path: 'facdept', component: FacdepartmentComponent },
   { path: 'facHolidaylist', component: FacholidaylistComponent },
+  { path: 'Complete-ffaculty', component: FaccompleteprofileComponent },
+ 
   
-  
+
 
 
   // { path: '', redirectTo: '/admin-dashboard', pathMatch: 'full' }, // Default route

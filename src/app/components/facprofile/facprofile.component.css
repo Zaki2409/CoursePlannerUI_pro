@@ -1,0 +1,98 @@
+/* Container */
+.container-my-5 {
+    padding-top: 20px;
+    padding-right: 9%;
+    padding-left: 9%;
+}
+
+/* Navbar */
+.navbar {
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+/* Faculty Details Container */
+.faculty-details-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.faculty-details-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.faculty-details-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.faculty-details-container p strong {
+    color: #343a40;
+}
+
+/* Table (if you have any table) */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table td {
+    color: #555;
+}
+
+/* Global */
+h5 {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+button, input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}

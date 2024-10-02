@@ -1,1 +1,144 @@
-<p>faccompleteprofile works!</p>
+<div style="padding-top: 0%; padding-right: 3%; padding-left: 3%;">
+
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container" >
+          <a class="navbar-brand" routerLink="/profile" >Faculty Information</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link active" aria-current="page" routerLink="/Complete-faculty" >Complete Profile</a></li>
+                <li class="nav-item">
+            
+                  <a class="nav-link active" aria-current="page"   routerLink="/admin-dashboard" >Dash board</a>
+               
+                
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <body>
+        <div class="container my-5">
+            <!-- <h1 class="mb-3">Complete Faculty Profile</h1> -->
+            <div class="profile-container">
+             <h2>Temparray Adress</h2> 
+              <form (ngSubmit)="addtempfacultyadd()">
+                <!-- <div class="form-group">
+                  <label for="uid">UID</label>
+                  <input id="uid" [(ngModel)]="createTEMPadressfaculty.uid" name="uid" type="text" class="form-control" required>
+                </div> -->
+                <div class="form-group">
+                  <label for="line1">Line 1</label>
+                  <input id="line1" [(ngModel)]="createTEMPadressfaculty.line1" name="line1" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="line2">Line 2</label>
+                  <input id="line2" [(ngModel)]="createTEMPadressfaculty.line2" name="line2" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input id="city" [(ngModel)]="createTEMPadressfaculty.city" name="city" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="postalCode">Postal Code</label>
+                  <input id="postalCode" [(ngModel)]="createTEMPadressfaculty.postalCode" name="postalCode" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="fkStateUid">State UID</label>
+                    <select id="fkStateUid" [(ngModel)]="createTEMPadressfaculty.fkStateUid" name="fkStateUid"
+                      class="form-control" required>
+                      <option *ngFor="let state of stateOptions" [value]="state.uid">{{ state.uid }}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="fkCountryUid">Country UID</label>
+                    <select id="fkCountryUid" [(ngModel)]="createTEMPadressfaculty.fkCountryUid" name="fkCountryUid"
+                      class="form-control" required>
+                      <option *ngFor="let country of countryOptions" [value]="country.uid">{{ country.uid }}</option>
+                    </select>
+                  </div>
+                <div class="form-group">
+                  <label for="createdBy">Created By</label>
+                  <input id="createdBy" [(ngModel)]="createTEMPadressfaculty.createdBy" name="createdBy" type="text" class="form-control" required>
+                </div>
+                <!-- <div class="form-group">
+                  <label for="createdAt">Created At</label>
+                  <input id="createdAt" [(ngModel)]="createTEMPadressfaculty.createdAt" name="createdAt" type="datetime-local" class="form-control" required>
+                </div> -->
+                <div class="form-group">
+                  <label for="isActive">Is Active</label>
+                  <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="createTEMPadressfaculty.isActive" name="isActive" />
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit Temprary Adress</button>
+              </form>
+            </div>
+         
+            <br>
+          
+            <div class="profile-container">
+              <h2>Permamnet Adress</h2> 
+               <form (ngSubmit)="addpermanetnfacultyadd()">
+                 <!-- <div class="form-group">
+                   <label for="uid">UID</label>
+                   <input id="uid" [(ngModel)]="createTEMPadressfaculty.uid" name="uid" type="text" class="form-control" required>
+                 </div> -->
+                 <div class="form-group">
+                   <label for="line1">Line 1</label>
+                   <input id="line1" [(ngModel)]="createPermanentadressfaculty.line1" name="line1" type="text" class="form-control" required>
+                 </div>
+                 <div class="form-group">
+                  <label for="line2">Line 2</label>
+                  <input id="line2" [(ngModel)]="createPermanentadressfaculty.line2" name="line2" type="text" class="form-control" required>
+                </div>
+                 <div class="form-group">
+                   <label for="city">City</label>
+                   <input id="city" [(ngModel)]="createPermanentadressfaculty.city" name="city" type="text" class="form-control" required>
+                 </div>
+                 <div class="form-group">
+                   <label for="postalCode">Postal Code</label>
+                   <input id="postalCode" [(ngModel)]="createPermanentadressfaculty.postalCode" name="postalCode" type="text" class="form-control" required>
+                 </div>
+                 <div class="form-group">
+                     <label for="fkStateUid">State UID</label>
+                     <select id="fkStateUid" [(ngModel)]="createPermanentadressfaculty.fkStateUid" name="fkStateUid"
+                       class="form-control" required>
+                       <option *ngFor="let state of stateOptions" [value]="state.uid">{{ state.uid }}</option>
+                     </select>
+                   </div>
+                   <div class="form-group">
+                     <label for="fkCountryUid">Country UID</label>
+                     <select id="fkCountryUid" [(ngModel)]="createPermanentadressfaculty.fkCountryUid" name="fkCountryUid"
+                       class="form-control" required>
+                       <option *ngFor="let country of countryOptions" [value]="country.uid">{{ country.uid }}</option>
+                     </select>
+                   </div>
+                 <div class="form-group">
+                   <label for="createdBy">Created By</label>
+                   <input id="createdBy" [(ngModel)]="createPermanentadressfaculty.createdBy" name="createdBy" type="text" class="form-control" required>
+                 </div>
+                 <!-- <div class="form-group">
+                   <label for="createdAt">Created At</label>
+                   <input id="createdAt" [(ngModel)]="createTEMPadressfaculty.createdAt" name="createdAt" type="datetime-local" class="form-control" required>
+                 </div> -->
+                 <div class="form-group">
+                  <label for="isActive">Is Active</label>
+                  <input type="checkbox" id="isActive" class="form-check-input"  [(ngModel)]="createPermanentadressfaculty.isActive" name="isActive" />
+                </div>
+                 <br>
+                 <button type="submit" class="btn btn-primary">Submit Temprary Adress</button>
+               </form>
+      
+               
+      
+               
+             </div>
+        
+        </div>
+          
+    </body>
+    </div>
