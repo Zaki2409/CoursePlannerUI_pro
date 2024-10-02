@@ -19,6 +19,12 @@ import { CreateAcademicCalenderComponent } from './components/create-academic-ca
 import { HolidayListComponent } from './components/holiday-list/holiday-list.component';
 import { CreateHolidayListComponent } from './components/create-holiday-list/create-holiday-list.component';
 import { WeekttComponent } from './components/weektt/weektt.component';
+import { FacacademicalenderComponent } from './components/facacademicalender/facacademicalender.component';
+import { FaccompleteprofileComponent } from './components/faccompleteprofile/faccompleteprofile.component';
+import { FaccourseComponent } from './components/faccourse/faccourse.component';
+import { FacdepartmentComponent } from './components/facdepartment/facdepartment.component';
+import { FacholidaylistComponent } from './components/facholidaylist/facholidaylist.component';
+import { FaclessonComponent } from './components/faclesson/faclesson.component';
 
 
 
@@ -48,7 +54,15 @@ const routes: Routes = [
   { path: 'Holiday', component: HolidayListComponent },
   { path: 'createHoliday', component: CreateHolidayListComponent },
   { path: 'weekday', component: WeekttComponent },
-  
+
+  // faculty routing
+  { path: 'faclesson', component: FaclessonComponent },
+  { path: 'facacademic-calendar', component: FacacademicalenderComponent },
+  { path: 'faccourse', component: FaccourseComponent },
+  { path: 'facprofile', component: FaccompleteprofileComponent },
+  { path: 'faccourse', component: FaccourseComponent },
+  { path: 'facdept', component: FacdepartmentComponent },
+  { path: 'facHolidaylist', component: FacholidaylistComponent },
   
   
 
