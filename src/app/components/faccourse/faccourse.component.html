@@ -1,1 +1,55 @@
-<p>faccourse works!</p>
+<!-- your-component.component.html -->
+<div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
+    <!-- Navbar -->
+    <nav  class="navbar navbar-expand-lg  navbar-dark bg-dark" >
+      <a class="navbar-brand" routerLink="/course"  style="padding-left: 1%;">Course Management</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+      
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/basic-admin-dashboard">Dash-Board</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h5 class="mb-3" style="padding-top: 2%;">Course List</h5>
+    <br>
+    <table class="table" *ngIf="course">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>UID</th>
+          <th>Course Code</th>
+          <th>Course Name</th>
+          <th>Weekly Lectures</th>
+          <th>Weekly Theory</th>
+          <th>Weekly Practicals</th>
+          <th>Created By</th>
+          <th>Created At</th>
+          <th>Updated By</th>
+          <th>Updated At</th>
+          <th>Is Active</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let courses of course">
+          <td>{{courses.id}}</td>
+          <td>{{courses.uid}}</td>
+          <td>{{courses.courseCode}}</td>
+          <td>{{courses.courseName}}</td>
+          <td>{{courses.weeklyLectures}}</td>
+          <td>{{courses.weeklyTheory}}</td>
+          <td>{{courses.weeklyPracticals}}</td>
+          <td>{{courses.createdBy}}</td>
+          <td>{{courses.createdAt | date:'short'}}</td>
+          <td>{{courses.updatedBy}}</td>
+          <td>{{courses.updatedAt | date:'short'}}</td>
+          <td>{{courses.isActive ? 'Yes' : 'No'}}</td>
+          <td><a [routerLink]="['/edit', courses.id]">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!course">No Course Details Were Found</p>
+  </div>
+  
