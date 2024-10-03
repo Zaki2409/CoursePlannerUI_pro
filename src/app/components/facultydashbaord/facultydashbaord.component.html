@@ -1,8 +1,9 @@
 <div class="container">
   <app-f-sidebar></app-f-sidebar>
   <div class="content">
+    <p>TODAY: {{ selected | date: 'fullDate' }}</p> <!-- Display selected date -->
     <!-- Content of Basic Dashboard -->
-    <h1>Welcome {{ Weektt1[0]?.facultyName }} to the Faculty Dashboard</h1>
+    <b><h1>Welcome {{ Weektt1[0]?.facultyName }} to the Faculty Dashboard</h1></b>
 
 
     <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%;">
@@ -19,6 +20,7 @@
       </nav> -->
       
       <!-- Title -->
+       
       <h5 class="mb-3" style="padding-top: 2%;">Week Time Table List</h5>
       <br>
       
@@ -59,7 +61,14 @@
       </table>
       
       <!-- Message for No Data -->
-      <p *ngIf="!weektt || weektt.length === 0"> Week Time Table Has Not Been Created By Admin</p>
+      <p *ngIf="!weektt"> Week Time Table Has Not Been Created By Admin</p>
+    </div>
+    <div class="calender" >
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <br>
+      <p>Selected Date: {{ selected | date: 'fullDate' }}</p> <!-- Display selected date -->
     </div>
   </div>
 </div>

@@ -87,6 +87,9 @@ linwqacademicaclass: LINQacademicclass = {
 
 
   ngOnInit(): void {
+    //CALDENRR
+    this.selected = new Date();  // Set selected date to today's date
+
     // Step 1: Get the stored user UID
     this.userUid = localStorage.getItem('userUid');
     console.log(this.userUid);
@@ -123,6 +126,9 @@ linwqacademicaclass: LINQacademicclass = {
 
 
   
+//CALENDER
+selected: Date | null = null;  // Property for selected date
+
 
 
   

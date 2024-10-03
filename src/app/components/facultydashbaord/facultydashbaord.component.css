@@ -22,3 +22,12 @@
 }
 
 /* Additional content styling can go here */
+.demo-inline-calendar-card {
+  width: 300px;
+  align-self: auto;
+}
+
+.calender{
+  padding-left: 50px;
+  padding-top: 50px;
+}

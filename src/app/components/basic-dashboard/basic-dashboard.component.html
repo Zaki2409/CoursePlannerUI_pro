@@ -1,9 +1,19 @@
 <div class="container">
-    <app-sidebar-component></app-sidebar-component>
-    <div class="content">
-      <!-- Content of Basic Dashboard -->
-      <h1>Welcome to admin Dashboard</h1>
-      <!-- Additional content as needed -->
-    </div>
+  <app-sidebar-component></app-sidebar-component>
+  <div class="content">
+    <p>TODAY: {{ selected | date: 'fullDate' }}</p> <!-- Display selected date -->
+    <!-- Content of Basic Dashboard -->
+     
+    <h1>Welcome to admin Dashboard</h1>
+    
+    <!-- Calendar component -->
+     <div class="calender" >
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+    <br>
+    <p>Selected Date: {{ selected | date: 'fullDate' }}</p> <!-- Display selected date -->
   </div>
-  
+  </div>
+
+</div>

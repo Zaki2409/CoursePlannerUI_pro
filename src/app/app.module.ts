@@ -50,6 +50,13 @@ import { FacprofileComponent } from './components/facprofile/facprofile.componen
 
 
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
+
 
 
 registerLocaleData(en);
@@ -58,37 +65,32 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LoginPageComponent,
-   
     LandingPageComponent,
-        BasicDashboardComponent,
-        RegisterFacultyComponent,
-        LessonComponent,
-        AcademicCalendarComponent,
-        CourseComponent,
-       
-        SidebarComponentComponent,
-                ProfileComponent,
-             
-                CompleteProfileComponent,
-                              FacultydashbaordComponent,
-                              FSidebarComponent,
-                              CreatecourseComponent,
-                              DepartmentComponent,
-                              CreatedepartmentComponent,
-                              CreatelessonComponent,
-                             
-                              CreateAcademicCalenderComponent,
-                                                            HolidayListComponent,
-                                                            CreateHolidayListComponent,
-                                                            WeekttComponent,
-                                                            FaclessonComponent,
-                                                            FaccourseComponent,
-                                                            FacacademicalenderComponent,
-                                                            FacholidaylistComponent,
-                                                            FacdepartmentComponent,
-                                                         
-                                                            FaccompleteprofileComponent,
-                                                                                                                      FacprofileComponent,
+    BasicDashboardComponent,
+    RegisterFacultyComponent,
+    LessonComponent,
+    AcademicCalendarComponent,
+    CourseComponent,
+    SidebarComponentComponent,
+    ProfileComponent,
+    CompleteProfileComponent,
+    FacultydashbaordComponent,
+    FSidebarComponent,
+    CreatecourseComponent,
+    DepartmentComponent,
+    CreatedepartmentComponent,
+    CreatelessonComponent,
+    CreateAcademicCalenderComponent,
+    HolidayListComponent,
+    CreateHolidayListComponent,
+    WeekttComponent,
+    FaclessonComponent,
+    FaccourseComponent,
+    FacacademicalenderComponent,
+    FacholidaylistComponent,
+    FacdepartmentComponent,
+    FaccompleteprofileComponent,
+    FacprofileComponent,                                                        
                          
   ],
   imports: [
@@ -105,7 +107,12 @@ registerLocaleData(en);
     NbInputModule,
     NbEvaIconsModule,
     NbActionsModule ,
-    NbIconModule 
+    NbIconModule ,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+   
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
