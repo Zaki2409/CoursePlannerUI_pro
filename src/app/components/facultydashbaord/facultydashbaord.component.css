@@ -1,31 +1,24 @@
-/* .container {
-    display: flex;
-  }
-  
-  .content {
-    margin-left: 200px; /* Adjust to match sidebar width
-    padding: 20px;
-  } */
-
-  /* Styling for container */
-  .container {
-    display: flex;
-  }
-  
-  /* Styling for content */
-  .content {
-    margin-left: 200px; /* Adjust to match sidebar width */
-    padding: 20px;
-    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
-  }
-  
-  .sidebar:hover + .content {
-    margin-left: 220px; /* Shift content when sidebar expands */
-  }
-
- 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Content Area */
+.content {
+  margin-left: 220px; /* Match the width of the sidebar */
+  padding: 20px;
+  background-color: #ffffff; /* Keep it clean with a white background */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a modern look */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
-  
+
+/* Dashboard Heading */
+.content h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+/* Additional content styling can go here */

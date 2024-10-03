@@ -1,73 +1,54 @@
-/* .sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
-    padding-top: 20px;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .sidebar ul li a:hover {
-    background-color: #ddd;
-  }
-   */
-
-   /* Styling for sidebar */
+/* Sidebar Container */
 .sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
-    padding-top: 20px;
-    transition: width 0.3s ease; /* Smooth transition for width change */
-  }
-  
-  .sidebar:hover {
-    width: 220px; /* Expand width on hover */
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-  }
-  
-  .sidebar ul li a:hover {
-    background-color: #ddd;
-  }
-  
-    
-  .logout-item {
-    margin-top: 630px; /* Adjust this value as needed */
-  }
-  
+  width: 250px;
+  background-color: #2c3e50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 20px;
+  color: #ecf0f1;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Sidebar Links */
+.sidebar ul li {
+  padding: 15px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  display: block;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e;
+  border-radius: 5px;
+  padding-left: 20px;
+  transition: 0.3s;
+}
+
+/* Active or Selected Link */
+.sidebar ul li.active a {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Log Out Link */
+.sidebar ul li.logout-item a {
+  color: #e74c3c;
+}
+
+.sidebar ul li.logout-item a:hover {
+  background-color: #c0392b;
+  padding-left: 20px;
+}
