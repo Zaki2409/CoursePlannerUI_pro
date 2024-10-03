@@ -1,1 +1,49 @@
-<p>faclesson works!</p>
+<div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%; ">
+    <!-- Navbar -->
+    <nav  class="navbar navbar-expand-lg  navbar-dark bg-dark">
+      <a class="navbar-brand" routerLink="/lesson"  style="padding-left: 1%;">Lesson Management</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/basic-admin-dashboard">Dash-Board</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h5 class="mb-3" style="padding-top: 2%;">Lesson List</h5>
+    <br>
+    <table class="table" *ngIf="lesson">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>UID</th>
+          <th>Lesson Name</th>
+          <th>Lesson Topic</th>
+          <th>Course UID</th>
+          <th>Created By</th>
+          <th>Created At</th>
+          <th>Updated By</th>
+          <th>Updated At</th>
+          <th>Is Active</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lessons of lesson">
+          <td>{{lessons.id}}</td>
+          <td>{{lessons.uid}}</td>
+          <td>{{lessons.lessonName}}</td>
+          <td>{{lessons.lessonTopic}}</td>
+          <td>{{lessons.fkCourseUid}}</td>
+          <td>{{lessons.createdBy}}</td>
+          <td>{{lessons.createdAt | date:'short'}}</td>
+          <td>{{lessons.updatedBy}}</td>
+          <td>{{lessons.updatedAt | date:'short'}}</td>
+          <td>{{lessons.isActive ? 'Yes' : 'No'}}</td>
+          <td><a [routerLink]="['/edit', lessons.id]">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!lesson">No Lesson Details Were Found</p>
+  </div>
