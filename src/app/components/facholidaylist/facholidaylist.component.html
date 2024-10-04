@@ -2,7 +2,7 @@
 <div class="container-my-5" style="padding-top: 0%; padding-right: 3%; padding-left: 3%;">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" routerLink="/Holiday" style="padding-left: 1%;">Holiday List Management</a>
+      <a class="navbar-brand" routerLink="/facHolidaylist" style="padding-left: 1%;">Holiday List Management</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           
@@ -12,7 +12,7 @@
         </ul>
       </div>
     </nav>
-    <h5 class="mb-3" style="padding-top: 1%;">Holiday List</h5>
+    <h4 class="mb-3" style="padding-top: 1%;">Holiday List</h4>
     <br>
     <table class="table" *ngIf="holidaylist">
       <thead>
@@ -24,8 +24,8 @@
           <th>Date</th>
           <th>Created By</th>
           <th>Created At</th>
-          <th>Updated By</th>
-          <th>Updated At</th>
+          <!-- <th>Updated By</th>
+          <th>Updated At</th> -->
           <th>Day</th>
           <th>Is Active</th>
           <th></th>
@@ -40,8 +40,8 @@
           <td>{{item.date | date:'shortDate'}}</td>
           <td>{{item.createdBy}}</td>
           <td>{{item.createdAt | date:'short'}}</td>
-          <td>{{item.updatedBy}}</td>
-          <td>{{item.updatedAt | date:'short'}}</td>
+          <!-- <td>{{item.updatedBy}}</td>
+          <td>{{item.updatedAt | date:'short'}}</td> -->
           <td>{{item.day}}</td>
           <td>{{item.isActive ? 'Yes' : 'No'}}</td>
           <td><a [routerLink]="['/edit', item.id]">View</a></td>

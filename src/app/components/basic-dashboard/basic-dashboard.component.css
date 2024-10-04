@@ -1,7 +1,8 @@
 /* Content Area */
 .content {
-  margin-left: 220px; /* Match the width of the sidebar */
+  margin-left: 100px; /* Match the width of the sidebar */
   padding: 20px;
+  padding-right: 50px;
   background-color: #ffffff; /* Keep it clean with a white background */
   min-height: 100vh;
   font-family: Arial, sans-serif;
@@ -28,6 +29,6 @@
 }
 
 .calender{
-  padding-left: 50px;
+  padding-left: 00px;
   padding-top: 50px;
 }

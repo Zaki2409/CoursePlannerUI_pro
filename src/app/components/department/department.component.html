@@ -13,7 +13,7 @@
             </ul>
         </div>
     </nav>
-    <h5 class="mb-3" style="padding-top: 2%;">Department Details</h5>
+    <h4 class="mb-3" style="padding-top: 2%;">Department Details</h4>
     <br>
     <table class="table" *ngIf="department">
         <thead>
@@ -24,8 +24,8 @@
                 <th>Department Name</th>
                 <th>Created By</th>
                 <th>Created At</th>
-                <th>Updated By</th>
-                <th>Updated At</th>
+                <!-- <th>Updated By</th>
+                <th>Updated At</th> -->
                 <th>Is Active</th>
             </tr>
         </thead>
@@ -37,8 +37,8 @@
                 <td>{{ departments.deptName }}</td>
                 <td>{{ departments.createdBy }}</td>
                 <td>{{ departments.createdAt | date: 'short' }}</td>
-                <td>{{ departments.updatedBy }}</td>
-                <td>{{ departments.updatedAt | date: 'short' }}</td>
+                <!-- <td>{{ departments.updatedBy }}</td>
+                <td>{{ departments.updatedAt | date: 'short' }}</td> -->
                 <td>{{ departments.isActive ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
