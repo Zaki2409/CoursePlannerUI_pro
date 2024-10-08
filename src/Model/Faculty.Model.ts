@@ -18,5 +18,6 @@ export interface Faculty {
     createdAt: Date;
     updatedBy?: string;
     updatedAt?: Date;
+    token?: string; // this line to include token property
   }
   

@@ -8,7 +8,6 @@ import { LessonComponent } from './components/lesson/lesson.component';
 import { AcademicCalendarComponent } from './components/academic-calendar/academic-calendar.component';
 import { CourseComponent } from './components/course/course.component';
 import { ProfileComponent } from './components/profile/profile.component';
-
 import { CompleteProfileComponent } from './components/complete-profile/complete-profile.component';
 import { FacultydashbaordComponent } from './components/facultydashbaord/facultydashbaord.component';
 import { CreatecourseComponent } from './components/createcourse/createcourse.component';
@@ -26,19 +25,17 @@ import { FacdepartmentComponent } from './components/facdepartment/facdepartment
 import { FacholidaylistComponent } from './components/facholidaylist/facholidaylist.component';
 import { FaclessonComponent } from './components/faclesson/faclesson.component';
 import { FacprofileComponent } from './components/facprofile/facprofile.component';
-
-
-
+import { authGuard } from './Servcie/auth.guard';
 
 const routes: Routes = [
- { path: '', component: LandingPageComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginPageComponent },
-  { path: 'admin-dashboard', component: BasicDashboardComponent },
+  { path: 'admin-dashboard', component: BasicDashboardComponent, canActivate: [authGuard] },
   { path: 'register-faculty', component: RegisterFacultyComponent },
   { path: 'lesson', component: LessonComponent },
   { path: 'academic-calendar', component: AcademicCalendarComponent },
   { path: 'course', component: CourseComponent },
-  { path: 'basic-admin-dashboard', component: FacultydashbaordComponent },
+  { path: 'basic-admin-dashboard', component: FacultydashbaordComponent, canActivate: [authGuard] },
   { path: 'profile', component: ProfileComponent },
   { path: 'facultylesson', component: LessonComponent },
   { path: 'facultyacademic-calendar', component: AcademicCalendarComponent },
@@ -48,8 +45,6 @@ const routes: Routes = [
   { path: 'createcourse', component: CreatecourseComponent },
   { path: 'Department', component: DepartmentComponent },
   { path: 'createdepartment', component: CreatedepartmentComponent },
-  { path: 'createdepartment', component: CreatedepartmentComponent },
-  //{ path: 'lesson', component: LessonComponent },
   { path: 'createlesson', component: CreatelessonComponent },
   { path: 'academic', component: AcademicCalendarComponent },
   { path: 'createacademic', component: CreateAcademicCalenderComponent },
@@ -57,24 +52,17 @@ const routes: Routes = [
   { path: 'createHoliday', component: CreateHolidayListComponent },
   { path: 'weekday', component: WeekttComponent },
 
-  // faculty routing
+  // Faculty routing
   { path: 'faclesson', component: FaclessonComponent },
   { path: 'facacademic-calendar', component: FacacademicalenderComponent },
   { path: 'faccourse', component: FaccourseComponent },
   { path: 'facprofile', component: FacprofileComponent },
-  { path: 'faccourse', component: FaccourseComponent },
   { path: 'facdept', component: FacdepartmentComponent },
   { path: 'facHolidaylist', component: FacholidaylistComponent },
   { path: 'Complete-ffaculty', component: FaccompleteprofileComponent },
- 
-  
 
-
-
-  // { path: '', redirectTo: '/admin-dashboard', pathMatch: 'full' }, // Default route
-  { path: '**', redirectTo: '/admin-dashboard' }, // Redirect any other route to def // cahnge to dahsbaod
-
- 
+  // Default route
+  { path: '**', redirectTo: '/admin-dashboard' },
 ];
 
 @NgModule({

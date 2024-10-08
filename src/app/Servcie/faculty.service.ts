@@ -24,7 +24,7 @@ export class FacultyService {
 
   authenticate(loginName: string, loginPassword: string): Observable<Faculty> {
     
-    return this.http.post<Faculty>(this.baseApiUrl + 'api/Faculty/Authenticate', { loginName, loginPassword });
+    return this.http.post<Faculty>(this.baseApiUrl + 'api/Faculty/login', { loginName, loginPassword });
   }
   
   registerFaculty(faculty: Faculty): Observable<any> {
